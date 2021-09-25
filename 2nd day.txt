@@ -1,0 +1,178 @@
+admin@Arzuuu MINGW64 ~
+$ cd Desktop/
+
+admin@Arzuuu MINGW64 ~/Desktop
+$ mkdir Project
+
+admin@Arzuuu MINGW64 ~/Desktop
+$ cd Project/
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ touch file1.txt
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ touch file2.txt
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ touch file3.txt
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ ls
+file1.txt  file2.txt  file3.txt
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ ls -a
+./  ../  file1.txt  file2.txt  file3.txt
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ touch sectrets.txt
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ ls
+file1.txt  file2.txt  file3.txt  sectrets.txt
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ delete secrets.txt
+bash: delete: command not found
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ rm sectrets.rtf
+rm: cannot remove 'sectrets.rtf': No such file or directory
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ ls
+file1.txt  file2.txt  file3.txt  sectrets.txt
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ rm sectrets.txt
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ ls
+file1.txt  file2.txt  file3.txt
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ touch secrets.txt
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ ls -a
+./  ../  file1.txt  file2.txt  file3.txt  secrets.txt
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ touch .gitignore
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ ls -a
+./  ../  .gitignore  file1.txt  file2.txt  file3.txt  secrets.txt
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ ls
+file1.txt  file2.txt  file3.txt  secrets.txt
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ start .gitignore
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ ls -a
+./  ../  .gitignore  file1.txt  file2.txt  file3.txt  secrets.txt
+
+admin@Arzuuu MINGW64 ~/Desktop/Project
+$ git init 
+Initialized empty Git repository in C:/Users/admin/Desktop/Project/.git/
+
+admin@Arzuuu MINGW64 ~/Desktop/Project (master)
+$ git add .
+
+admin@Arzuuu MINGW64 ~/Desktop/Project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitignore
+        new file:   file1.txt
+        new file:   file2.txt
+        new file:   file3.txt
+        new file:   secrets.txt
+
+
+admin@Arzuuu MINGW64 ~/Desktop/Project (master)
+$ rm .
+rm: cannot remove '.': Is a directory
+
+admin@Arzuuu MINGW64 ~/Desktop/Project (master)
+$ git rm --catched -r .
+error: unknown option `catched'
+usage: git rm [<options>] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+admin@Arzuuu MINGW64 ~/Desktop/Project (master)
+$ git rm --cached -r .
+rm '.gitignore'
+rm 'file1.txt'
+rm 'file2.txt'
+rm 'file3.txt'
+rm 'secrets.txt'
+
+admin@Arzuuu MINGW64 ~/Desktop/Project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        file1.txt
+        file2.txt
+        file3.txt
+        secrets.txt
+
+nothing added to commit but untracked files present (use "git add" to track)      
+
+admin@Arzuuu MINGW64 ~/Desktop/Project (master)
+$ start .gitignore
+
+admin@Arzuuu MINGW64 ~/Desktop/Project (master)
+$ ls -a
+./  ../  .git/  .gitignore  file1.txt  file2.txt  file3.txt  secrets.txt
+
+admin@Arzuuu MINGW64 ~/Desktop/Project (master)
+$ git add .
+
+admin@Arzuuu MINGW64 ~/Desktop/Project (master)
+$ git status 
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitignore
+        new file:   file1.txt
+        new file:   file2.txt
+        new file:   file3.txt
+
+
+admin@Arzuuu MINGW64 ~/Desktop/Project (master)
+$ git commit -m "nitial Commit" 
+[master (root-commit) fa13289] nitial Commit
+ 4 files changed, 5 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 file1.txt
+ create mode 100644 file2.txt
+ create mode 100644 file3.txt
+
+admin@Arzuuu MINGW64 ~/Desktop/Project (master)
+$ ^C
